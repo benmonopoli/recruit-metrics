@@ -1,0 +1,4 @@
+project_id = "your-project-id"
+
+[functions.greenhouse-metrics]
+verify_jwt = false
