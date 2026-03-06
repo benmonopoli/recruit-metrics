@@ -29,6 +29,8 @@ Recruit Metrics solves this by pulling data directly from the Greenhouse Harvest
 
 A single Supabase Edge Function (`greenhouse-metrics`) fetches jobs, applications, and offers from the Greenhouse Harvest API, computes metrics server-side, and caches the result in Supabase. The frontend reads from cache for fast loads; a manual refresh triggers a background re-fetch. Cache is keyed to the current day.
 
+Data can be exported from the dashboard in CSV or JSON format — useful for sharing metrics with leadership or pulling into a spreadsheet for ad hoc analysis.
+
 ## Getting started
 
 ### Prerequisites
@@ -36,6 +38,8 @@ A single Supabase Edge Function (`greenhouse-metrics`) fetches jobs, application
 - Node.js 18+ or Bun
 - A Supabase project
 - Greenhouse Harvest API key (Greenhouse → Configure → Dev Center → API Credential Management)
+
+**Greenhouse API permissions required:** The Harvest API key needs read access to Jobs, Applications, Offers, and Users. A read-only key is sufficient — Recruit Metrics does not write to Greenhouse.
 
 ### Setup
 
